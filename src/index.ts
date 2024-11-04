@@ -12,10 +12,10 @@ const main = async () => {
   //   });
   //   console.log(result);
   // @ Find All
-  const getAllPosts = await prisma.posts.findMany();
+  const getAllPosts = await prisma.post.findMany();
 
   // @ findFirst
-  const getFirstPost = await prisma.posts.findFirst({
+  const getFirstPost = await prisma.post.findFirst({
     where: {
       id: 2,
     },

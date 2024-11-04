@@ -50,7 +50,8 @@ const main = async () => {
   // const createUser = await prisma.user.create({
   //   data: {
   //     username: "user1",
-  //     email: "user1@ph.com",
+  //     email: "user3@ph.com",
+  //     age: 20,
   //     role: Role.user,
   //   },
   // });
@@ -66,41 +67,39 @@ const main = async () => {
   //     name: "software engineering",
   //   },
   // });
-
-  const createPost = await prisma.post.create({
-    data: {
-      title: "This is title 2",
-      content: "this is content of the post. 2",
-      authorId: 1,
-      postCategory: {
-        // Single category
-        // create: {
-        //   category: {
-        //     connect: {
-        //       id: 3,
-        //     },
-        //   },
-        // },
-        // Multiple categories
-        create: [
-          {
-            categoryId: 1,
-          },
-          {
-            categoryId: 3,
-          },
-          {
-            categoryId: 4,
-          },
-        ],
-      },
-    },
-    include: {
-      postCategory: true,
-    },
-  });
-  console.log(createPost);
-
+  // const createPost = await prisma.post.create({
+  //   data: {
+  //     title: "This is title 2",
+  //     content: "this is content of the post. 2",
+  //     authorId: 1,
+  //     postCategory: {
+  //       // Single category
+  //       // create: {
+  //       //   category: {
+  //       //     connect: {
+  //       //       id: 3,
+  //       //     },
+  //       //   },
+  //       // },
+  //       // Multiple categories
+  //       create: [
+  //         {
+  //           categoryId: 1,
+  //         },
+  //         {
+  //           categoryId: 3,
+  //         },
+  //         {
+  //           categoryId: 4,
+  //         },
+  //       ],
+  //     },
+  //   },
+  //   include: {
+  //     postCategory: true,
+  //   },
+  // });
+  // console.log(createPost);
   // console.log(createCategory);
 };
 main();
